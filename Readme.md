@@ -1,6 +1,6 @@
 # Application using Spring Boot, React, OAuth2, MySQL 
 
-![App Screenshot](documentaion/screenshoot.png)
+![App Screenshot](documentation/screenshot.png)
 
 # SpringSocial WebApp
 - web application
