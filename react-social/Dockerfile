@@ -36,4 +36,4 @@ COPY nginx.conf /etc/nginx/nginx.conf
 # from the outside.
 EXPOSE 80
 
-ENTRYPOINT ["nginx","-g","daemon off;"]
+ENTRYPOINT ["nginx","-g","daemon off;"]a

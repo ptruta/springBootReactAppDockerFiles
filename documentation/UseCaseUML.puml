@@ -6,9 +6,13 @@ rectangle application {
   customer -- (login)
   customer -- (sign up)
   customer -- (groceries)
+  customer -- (countries)
   customer -- (view profile)
   (groceries) -- (view list of groceries)
   (groceries) -- (add grocery to list)
   (groceries) -- (delete grocery from list)
+  (countries) -- (view list of countries)
+  (countries) -- (add countries to list)
+  (countries) -- (delete countries from list)
 }
 @enduml
