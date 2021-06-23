@@ -1,0 +1,13 @@
+.idea
+.DS_Store
+
+react-social/node_modules
+
+*.iws
+*.iml
+*.ipr
+
+*/.idea
+*/*.iws
+*/*.iml
+*/*.ipr

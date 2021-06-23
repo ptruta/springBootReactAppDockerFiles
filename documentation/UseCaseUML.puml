@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor customer
+rectangle application {
+  customer -- (login)
+  customer -- (sign up)
+  customer -- (groceries)
+  customer -- (view profile)
+  (groceries) -- (view list of groceries)
+  (groceries) -- (add grocery to list)
+  (groceries) -- (delete grocery from list)
+}
+@enduml
