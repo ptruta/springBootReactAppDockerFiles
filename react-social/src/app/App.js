@@ -9,11 +9,13 @@ import Login from '../user/login/Login';
 import Signup from '../user/signup/Signup';
 import Profile from '../user/profile/Profile';
 import Groceries from '../user/groceries/Groceries';
+import Countries from '../user/countries/Countries';
 import OAuth2RedirectHandler from '../user/oauth2/OAuth2RedirectHandler';
 import NotFound from '../common/NotFound';
 import LoadingIndicator from '../common/LoadingIndicator';
 import { getCurrentUser } from '../util/APIUtils';
 import { getGroceriesForCurrentlyLoggedInUser } from '../util/APIUtils';
+import { getCountriesForCurrentlyLoggedInUser } from '../util/APIUtils';
 import { ACCESS_TOKEN } from '../constants';
 import PrivateRoute from '../common/PrivateRoute';
 import Alert from 'react-s-alert';
@@ -28,11 +30,13 @@ class App extends Component {
       authenticated: false,
       currentUser: null,
       loading: false,
-      groceries: []
+      groceries: [],
+      countries: []
     }
 
     this.loadCurrentlyLoggedInUser = this.loadCurrentlyLoggedInUser.bind(this);
     this.loadGroceriesForCurrentlyLoggedInUser = this.loadGroceriesForCurrentlyLoggedInUser.bind(this);
+    this.loadCountriesForCurrentlyLoggedInUser = this.loadCountriesForCurrentlyLoggedInUser.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
   }
 
@@ -55,7 +59,7 @@ class App extends Component {
     });    
   }
 
-   loadGroceriesForCurrentlyLoggedInUser() {
+  loadGroceriesForCurrentlyLoggedInUser() {
            getGroceriesForCurrentlyLoggedInUser()
                  .then(response => {
                       console.log(response);
@@ -63,7 +67,18 @@ class App extends Component {
                              groceries: response
                        });
                  });
+
+    
   }
+  loadCountriesForCurrentlyLoggedInUser() {
+    getCountriesForCurrentlyLoggedInUser()
+          .then(response => {
+               console.log(response);
+                this.setState({
+                      countries: response
+                });
+          });
+         }
 
   handleLogout() {
     localStorage.removeItem(ACCESS_TOKEN);
@@ -77,6 +92,8 @@ class App extends Component {
   componentDidMount() {
     this.loadCurrentlyLoggedInUser();
     this.loadGroceriesForCurrentlyLoggedInUser();
+    this.loadCountriesForCurrentlyLoggedInUser();
+    location.reload;
   }
 
   render() {
@@ -97,6 +114,9 @@ class App extends Component {
             <PrivateRoute path="/groceries" authenticated={this.state.authenticated}
                 groceries={this.state.groceries} currentUser={this.state.currentUser}
                           component={Groceries}></PrivateRoute>
+            <PrivateRoute path="/countries" authenticated={this.state.authenticated}
+                countries={this.state.countries} currentUser={this.state.currentUser}
+                          component={Countries}></PrivateRoute>
             <Route path="/login"
               render={(props) => <Login authenticated={this.state.authenticated} {...props} />}></Route>
             <Route path="/signup"

@@ -4,6 +4,10 @@
           box-sizing: border-box;
 }
 
+#root {
+  background-color: #7c6ebb;
+}
+
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
@@ -226,7 +230,7 @@ a:hover {
   position: absolute;
   left: 46%;
   top: 0;
-  background: #fff;
+  background: rgb(252, 249, 249);
   padding: 10px;
   color: rgba(0,0,0,.45);
 }

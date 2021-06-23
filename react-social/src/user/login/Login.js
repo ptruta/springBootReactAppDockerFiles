@@ -21,9 +21,13 @@ class Login extends Component {
                 });
             }, 100);
         }
+
+        //history.go(0);
+        location.reload;
     }
     
     render() {
+        
         if(this.props.authenticated) {
             return <Redirect
                 to={{

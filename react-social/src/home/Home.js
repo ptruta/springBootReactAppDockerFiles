@@ -21,7 +21,7 @@ class Home extends Component {
                             <div className="graf-circle"></div>
                         </div>
                     </div>
-                    <h1 className="home-title">Welcome to the grocery list app</h1>
+                    <h1 className="home-title">Welcome to the app</h1>
                 </div>
             </div>
         )

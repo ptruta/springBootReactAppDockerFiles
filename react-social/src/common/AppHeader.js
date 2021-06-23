@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './AppHeader.css';
 
 class AppHeader extends Component {
@@ -7,9 +7,6 @@ class AppHeader extends Component {
         return (
             <header className="app-header">
                 <div className="container">
-                    <div className="app-branding">
-                        <Link to="/" className="app-title">Grocery List</Link>
-                    </div>
                     <div className="app-options">
                         <nav className="app-nav">
                                 { this.props.authenticated ? (
@@ -21,10 +18,13 @@ class AppHeader extends Component {
                                             <NavLink to="/groceries">Groceries</NavLink>
                                         </li>
                                         <li>
+                                            <NavLink to="/countries">Countries</NavLink>
+                                        </li>
+                                        <li>
                                             <a onClick={this.props.onLogout}>Logout</a>
                                         </li>
                                     </ul>
-                                ): (
+                                 ): (
                                     <ul>
                                         <li>
                                             <NavLink to="/login">Login</NavLink>

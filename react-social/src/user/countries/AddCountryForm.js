@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { addNewGrocery } from '../../util/APIUtils';
+import { addNewCountry } from '../../util/APIUtils';
 import Alert from 'react-s-alert';
 
-export default class AddGroceryForm extends Component {
+export default class AddCountryForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -10,6 +10,7 @@ export default class AddGroceryForm extends Component {
         }
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        console.log("spercamergi");
     }
 
     handleInputChange(event) {
@@ -25,15 +26,15 @@ export default class AddGroceryForm extends Component {
     handleSubmit(event) {
         event.preventDefault();
 
-        const groceryRequest = Object.assign({}, this.state);
-        groceryRequest.id = this.props.groceries.length + 1
-        groceryRequest.user = this.props.currentUser
-        console.log(groceryRequest);
-        addNewGrocery(groceryRequest)
+        const countryRequest = Object.assign({}, this.state);
+        countryRequest.id = this.props.countries.length + 1
+        countryRequest.user = this.props.currentUser
+        console.log("lala"+countryRequest);
+        addNewCountry(countryRequest)
             .then(response => {
                 console.log(response);
-                Alert.success("You're successfully added new grocery to list!");
-                this.props.loadGroceriesForCurrentlyLoggedInUser();
+                Alert.success("You're successfully added new country to list!");
+                this.props.loadCountriesForCurrentlyLoggedInUser();
         });
     }
 
@@ -42,11 +43,11 @@ export default class AddGroceryForm extends Component {
             <form onSubmit={this.handleSubmit}>
                 <div className="form-item">
                     <input type="text" name="name"
-                        className="form-control" placeholder="Name"
+                        className="form-control" placeholder="City"
                         value={this.state.name} onChange={this.handleInputChange} required/>
                 </div>
                 <div className="form-item">
-                    <button type="submit" className="btn btn-block btn-primary">Add new Grocery</button>
+                    <button type="submit" className="btn btn-block btn-primary">Add new Country</button>
                 </div>
             </form>
 
