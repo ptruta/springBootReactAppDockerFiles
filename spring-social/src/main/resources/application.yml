@@ -1,9 +1,9 @@
 spring:
     datasource:
         #for docker
-        #url: jdbc:mysql://db:3306/spring_social?user=root&password=rootpassword&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false&maxReconnects=1500
+        url: jdbc:mysql://db:3306/spring_social?user=root&password=rootpassword&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false&maxReconnects=1500
         #locally
-        url: jdbc:mysql://localhost:3306/spring_social?user=root&password=rootpassword&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+        #url: jdbc:mysql://localhost:3306/spring_social?user=root&password=rootpassword&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
         username: root
         password: rootpassword
 
