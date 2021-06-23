@@ -1,6 +1,6 @@
 # Application using Spring Boot, React, OAuth2, MySQL 
 
-![App Screenshot](documentaion/screenshot.png)
+![App Screenshot](documentaion/screenshoot.png)
 
 # SpringSocial WebApp
 - web application
@@ -57,7 +57,7 @@ depending on your preferences of running the applications
 ![Use Case UML Screenshot](documentation/UseCaseUMLDiagram.png)
 
 ## 2
-![Use Case UML Screenshot 2](documentation/UMLUseCaseDiagramPUML.png)
+![Use Case UML Screenshot 2](documentation/UMLCaseDiagramPUML.png)
 
 ## C4Model
 
@@ -211,3 +211,11 @@ depending on your preferences of running the applications
 
 ## Container diagram (Usual)
 ![ContainerDiagram Screenshot](documentation/ContainerDiagram.jpg)
+
+
+## UBB Cluj-Napoca - Faculty of Mathematics and Computer Science
+
+### Software Engineering, 2020 - 2022
+
+- 1st year - 2nd semester
+- Software Design - Assessment
