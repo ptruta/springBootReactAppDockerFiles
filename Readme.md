@@ -40,6 +40,9 @@ add:
 -date-time-zone: +03.00
 ```
 
+## Create access token for Facebook from here(Facebook for developers):
+https://developers.facebook.com/apps/?show_reminder=true
+
 ## Configure the application.yml depending on ways of running
 ```
 Open spring-social/src/resources/application.yml
