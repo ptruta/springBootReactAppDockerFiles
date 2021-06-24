@@ -14,6 +14,7 @@ The application is a platform that has the client-server architecture offering C
 functionalities to the client through API (Application Programming Interface) requests. It is a 
 web application built in React which consumes REST services exposed by the application server. 
 It provides the possibility to login with credentials or through using an access token for facebook.
+It also uses docker images in order to be accessed from the localhost:3000.
 
 ### Technologies:
 - frontend: ReactJS
@@ -120,6 +121,7 @@ depending on your preferences of running the applications
 ### API Application [Container: Java]
 ![SystemComponentDiagram Screenshot2](documentation/Component1Diagram.png)
 
+## (Mermaid)
 ```mermaid
     graph TB
         SPAContainer("Single-Page Application [Container: TypeScript and ReactJS] - provides all of the SpringSocial functionality to customers via their web browser")
@@ -160,6 +162,8 @@ depending on your preferences of running the applications
 
 ### Single-Page Application [Container: TypeScript and ReactJS]
 ![SystemComponentDiagram Screenshot3](documentation/Component2Diagram.png)
+
+## (Mermaid)
 ```mermaid
     graph TB
         APIContainer("API Application [Container: Java] - provides the SpringSocial functionality via a JSON/HTTP API")
@@ -206,7 +210,7 @@ depending on your preferences of running the applications
 ## SoaML diagram
 ![SoaML Screenshot](documentation/SoaML.jpg)
 
-## Sytem Context diagraam (Usual)
+## System Context diagram (Usual)
 ![SystemContextDiagram Screenshot](documentation/SystemContextDiagram.jpeg)
 
 ## Container diagram (Usual)
